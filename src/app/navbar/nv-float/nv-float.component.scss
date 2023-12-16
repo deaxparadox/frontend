@@ -1,0 +1,101 @@
+#dashboard-left {
+    height: 90vh;
+    position: fixed;
+    left: 0;
+    top: 5vh;
+    display: flex;
+
+    #container {
+        background-image: linear-gradient(rgb(182, 182, 255), rgb(236, 236, 171));
+        color: rgb(41, 40, 40);
+        box-shadow: 0px 0px 4px 1px rgb(49, 49, 87);
+        width: 300px;
+        overflow: hidden;
+
+        #header {
+            background-color: inherit;
+            color: inherit;
+
+            h2 {
+                background-color: blueviolet;
+                color: white;
+                text-align: center;
+                margin: 0;
+                padding: 20px;
+            }
+        }
+
+        #body {
+
+            a {
+                display: block;
+                color: rgb(31, 31, 36);
+                font-weight: bold;
+                font-size: large;
+                text-decoration: none;
+                padding: 15px;
+                text-align: center;
+                transition: .3s;
+            }
+
+            a:hover {
+                background-color: rgb(196, 168, 223);
+            }
+
+            a:active {
+                background-color: rgb(166, 141, 189);
+            }
+        }
+    }
+
+    #button {
+        // background-color: brown;
+        transition: 0.5s;
+        display: flex;
+        // height: 60px;
+        // justify-content: left;
+        align-items: center;
+
+        button {
+            background-color: blueviolet;
+            color: white;
+            // font-size: large;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 4px 1px rgb(182, 182, 255);
+            transform: rotate(90deg);
+            transform-origin: left bottom;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+            cursor: pointer;
+            transform: .5s;
+            
+
+            h1,
+            h2,
+            h3 {
+                padding: 10px 20px;
+                margin: 0;
+                border-top-right-radius: 12px;
+                border-top-left-radius: 12px;
+                
+            }
+        }
+    }
+}
+
+.dashboard-button {
+    background-color:  blueviolet;
+}
+.dashboard-button-active {
+    background-color:  rgb(49, 4, 92);
+}
+
+.rotate-0 {
+    transform: rotateX(0deg);
+}
+
+.rotate-180 {
+    transform: rotateX(180deg);
+}
+

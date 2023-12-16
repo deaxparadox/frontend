@@ -1,0 +1,223 @@
+$outer-ring-color: blueviolet;
+
+#page-heading {
+    text-align: center;
+    background-color: $outer-ring-color;
+    color: white;
+    h1,
+    h2,
+    h3 {
+        margin: 0;
+        padding: 18px;
+        background-color: inherit;
+        color: inherit;
+    }
+}
+
+@keyframes To360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes To0 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#double-ring-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    #double-ring {
+        background-image: linear-gradient(rgb(253, 231, 253), rgb(225, 225, 252));
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    
+        #outer {
+            border: 15px solid $outer-ring-color;
+            border-left-color: white;
+            border-right-color: white;
+            border-radius: 50%;
+
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            animation-name: To360;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            #inner {
+                border: 15px solid $outer-ring-color;
+                border-top-color: white;
+                border-bottom-color: white;
+                border-radius: 50%;
+
+                width: 160px;
+                height:160px;
+                position: absolute;
+
+
+                animation-name: To0;
+                animation-duration: 2s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+                
+            }
+        }
+    }
+}
+
+
+// 
+// 
+//          INVERSE
+// 
+// 
+
+@keyframes ToNeg360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes ToNeg0 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#double-ring-container-inverse {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    #double-ring {
+        background-image: linear-gradient(rgb(253, 231, 253), rgb(225, 225, 252));
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    
+        #outer {
+            border: 15px solid blueviolet;
+            border-left-color: white;
+            border-right-color: white;
+            border-radius: 50%;
+
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            animation-name: ToNeg360;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            #inner {
+                border: 15px solid purple;
+                border-top-color: white;
+                border-bottom-color: white;
+                border-radius: 50%;
+
+                width: 160px;
+                height:160px;
+                position: absolute;
+
+
+                animation-name: ToNeg0;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+                
+            }
+        }
+    }
+}
+
+
+// 
+// Outer: Clock 
+// Inner: Anti-Clock
+// 
+#double-ring-container-oc-iac {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    #double-ring {
+        background-image: linear-gradient(rgb(253, 231, 253), rgb(225, 225, 252));
+        width: 100%;
+        height: 500px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    
+        #outer {
+            border: 15px solid blueviolet;
+            border-left-color: white;
+            border-right-color: white;
+            border-radius: 50%;
+
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+
+            animation-name: To360;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            #inner {
+                border: 15px solid purple;
+                border-top-color: white;
+                border-bottom-color: white;
+                border-radius: 50%;
+
+                width: 160px;
+                height:160px;
+                position: absolute;
+
+
+                animation-name: ToNeg0;
+                animation-duration: 1s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+
+                
+            }
+        }
+    }
+}
