@@ -1,0 +1,38 @@
+<p>pms-home works!</p>
+
+<button type="button" (click)="get_headings()">Get headings</button>
+
+<div class="section-box" *ngIf="headings">
+    <div class="section-heading">
+        <h2>Headings</h2>
+    </div>
+    <div class="section"  *ngFor="let heading of headings">
+        <h3>{{ heading.name }}</h3>
+        <hr>
+        <div id="date">
+            <div id="start">
+                <strong>
+                    <em>Start:</em>
+                </strong>&ThickSpace; <span *ngIf="heading.start">{{ heading.start}}</span>
+            </div>
+            <div id="end">
+                <strong>
+                    <em>End:</em>
+                </strong>&ThickSpace; <span *ngIf="heading.end">{{ heading.end}}</span>
+            </div>
+            <div id="note">
+                <strong>
+                    <em>Note:</em>
+                </strong>&ThickSpace; <span *ngIf="heading.note">{{ heading.note }}</span>
+            </div>
+            
+            <div id="description">
+                <strong>
+                    <em>description:</em>
+                </strong>
+                <hr>
+                <p *ngIf="heading.description">{{ heading.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
