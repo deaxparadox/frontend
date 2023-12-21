@@ -1,6 +1,5 @@
-<p>pms-home works!</p>
-
-<button type="button" (click)="get_headings()">Get headings</button>
+<app-pms-navbar></app-pms-navbar>
+<!-- <button type="button" (click)="get_headings()">Get headings</button> -->
 
 <div class="section-box" *ngIf="headings">
     <div class="section-heading">
@@ -13,26 +12,30 @@
             <div id="start">
                 <strong>
                     <em>Start:</em>
-                </strong>&ThickSpace; <span *ngIf="heading.start">{{ heading.start}}</span>
+                </strong>&ThickSpace; <span *ngIf="heading.start">&ThickSpace;{{ heading.start}}</span>
             </div>
             <div id="end">
                 <strong>
                     <em>End:</em>
-                </strong>&ThickSpace; <span *ngIf="heading.end">{{ heading.end}}</span>
+                </strong>&ThickSpace; <span *ngIf="heading.end">&ThickSpace;{{ heading.end}}</span>
             </div>
-            <div id="note">
-                <strong>
-                    <em>Note:</em>
-                </strong>&ThickSpace; <span *ngIf="heading.note">{{ heading.note }}</span>
-            </div>
-            
-            <div id="description">
-                <strong>
-                    <em>description:</em>
-                </strong>
-                <hr>
-                <p *ngIf="heading.description">{{ heading.description }}</p>
-            </div>
+        </div>
+        <div id="note">
+            <strong>
+                <em>Note:</em>
+            </strong>&ThickSpace; <span *ngIf="heading.note">&ThickSpace;{{ heading.note }}</span>
+        </div>
+        
+        <div id="description">
+            <strong>
+                <em>description:</em>
+            </strong>
+            <hr>
+            <p *ngIf="heading.description">{{ heading.description }}</p>
+        </div>
+
+        <div id="buttons">
+            <a routerLink="/pms/{{heading.id}}">Details</a>
         </div>
     </div>
 </div>

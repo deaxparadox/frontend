@@ -18,4 +18,7 @@ export class PmsHttpService {
   get_headings(): Observable<Heading[]> {
     return this.httpclient.get<Heading[]>(this.url_headings_v1)
   }
+  get_heading(id: string | null): Observable<Heading> {
+    return this.httpclient.get<Heading>(`${this.url_headings_v1}${id}/`)
+  }
 }

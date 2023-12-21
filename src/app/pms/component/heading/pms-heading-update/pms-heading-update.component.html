@@ -1,0 +1,39 @@
+<app-pms-navbar></app-pms-navbar>
+
+<div *ngIf="detail" class="section-box">
+    <div class="section-heading">
+        <h2>{{ detail.name }}</h2>
+    </div>
+    <div class="section">
+        <div id="date">
+            <div id="start">
+                <strong>
+                    <em>Start:</em>
+                </strong>&ThickSpace; <span *ngIf="detail.start">{{ detail.start}}</span>
+            </div>
+            <div id="end">
+                <strong>
+                    <em>End:</em>
+                </strong>&ThickSpace; <span *ngIf="detail.end">{{ detail.end}}</span>
+            </div>
+        </div>
+        <div id="note">
+            <strong>
+                <em>Note:</em>
+            </strong>&ThickSpace; <span *ngIf="detail.note">{{ detail.note }}</span>
+        </div>
+        
+        <div id="description">
+            <!-- <strong>
+                <em>Description:</em>
+            </strong> -->
+            <hr>
+            <p *ngIf="detail.description">{{ detail.description }}</p>
+        </div>
+
+        <div id="buttons">
+            <a routerLink="/pms/{{detail.id}}/update">Update</a>
+        </div>
+    </div>
+    
+</div>
