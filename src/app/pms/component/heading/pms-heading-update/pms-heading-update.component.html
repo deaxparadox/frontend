@@ -4,7 +4,23 @@
     <div class="section-heading">
         <h2>{{ detail.name }}</h2>
     </div>
-    <div class="section">
+    <div class="section-form">
+        <form id="form">
+            <div id="form-date">
+                <div id="form-start">
+                    <label for="form-start-date">Start</label>
+                    <input #start type="date" name="form-start-date" id="form-start-date" value="{{ detail.start }}">
+                </div>
+                <div id="form-end">
+                    <label for="form-end-date">End</label>
+                    <input #end type="date" name="form-end-date" id="form-end-date"  value="{{ detail.end }}">
+                </div>
+            </div>
+            <div id="form-note">
+                <label for="form-note">Note</label>
+                <input type="text" value="{{ detail.note }}">
+            </div>    
+        </form>
         <div id="date">
             <div id="start">
                 <strong>
