@@ -22,13 +22,25 @@ export class PmsHeadingDetailComponent implements OnInit {
 
   heading_detail?: Heading;
 
+  errorMessage?: string;
+  errorOccured = false;
+  loadingData = true;
+
+
   async get_heading_detail() {
     const id: string | null = this.activateRoute.snapshot.paramMap.get("id");
     this.pmsHttpService.get_heading(id).subscribe(
       h => {
         this.heading_detail = h;
         this.select.set(h);
+        this.loadingData = false;
         // console.log(h);
+      },
+      e => {
+        this.loadingData = false;
+        this.errorOccured = true;
+        console.log(e);
+        console.log("error on fetch :(")
       }
     );
   }

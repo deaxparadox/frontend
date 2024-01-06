@@ -1,41 +1,49 @@
+
+<app-error-on-fetch [errorOccured]="errorOccured" [loadingData]="loadingData"></app-error-on-fetch>
 <app-pms-navbar></app-pms-navbar>
-<!-- <button type="button" (click)="get_headings()">Get headings</button> -->
+<div id="row">
+    <div id="left"></div>
+    <div id="center">
+        <!-- <button type="button" (click)="get_headings()">Get headings</button> -->
 
-<div class="section-box" *ngIf="headings">
-    <div class="section-heading">
-        <h2>Headings</h2>
-    </div>
-    <div class="section"  *ngFor="let heading of headings">
-        <h3>{{ heading.name }}</h3>
-        <hr>
-        <div id="date">
-            <div id="start">
-                <strong>
-                    <em>Start:</em>
-                </strong>&ThickSpace; <span *ngIf="heading.start">&ThickSpace;{{ heading.start}}</span>
+        <div class="section-box" *ngIf="headings">
+            <div class="section-heading">
+                <h2>Headings</h2>
             </div>
-            <div id="end">
-                <strong>
-                    <em>End:</em>
-                </strong>&ThickSpace; <span *ngIf="heading.end">&ThickSpace;{{ heading.end}}</span>
-            </div>
-        </div>
-        <div id="note">
-            <strong>
-                <em>Note:</em>
-            </strong>&ThickSpace; <span *ngIf="heading.note">&ThickSpace;{{ heading.note }}</span>
-        </div>
-        
-        <div id="description">
-            <strong>
-                <em>description:</em>
-            </strong>
-            <hr>
-            <p *ngIf="heading.description">{{ heading.description }}</p>
-        </div>
+            <div class="section" *ngFor="let heading of headings">
+                <h3>{{ heading.name }}</h3>
+                <hr>
+                <div id="date">
+                    <div id="start">
+                        <strong>
+                            <em>Start:</em>
+                        </strong>&ThickSpace; <span *ngIf="heading.start">&ThickSpace;{{ heading.start}}</span>
+                    </div>
+                    <div id="end">
+                        <strong>
+                            <em>End:</em>
+                        </strong>&ThickSpace; <span *ngIf="heading.end">&ThickSpace;{{ heading.end}}</span>
+                    </div>
+                </div>
+                <div id="note">
+                    <strong>
+                        <em>Note:</em>
+                    </strong>&ThickSpace; <span *ngIf="heading.note">&ThickSpace;{{ heading.note }}</span>
+                </div>
 
-        <div id="buttons">
-            <a routerLink="/pms/{{heading.id}}">Details</a>
+                <div id="description">
+                    <strong>
+                        <em>description:</em>
+                    </strong>
+                    <hr>
+                    <p *ngIf="heading.description">{{ heading.description }}</p>
+                </div>
+
+                <div id="buttons">
+                    <a class="btn btn-danger" routerLink="/pms/{{heading.id}}">Details</a>
+                </div>
+            </div>
         </div>
     </div>
+    <div id="right"></div>
 </div>

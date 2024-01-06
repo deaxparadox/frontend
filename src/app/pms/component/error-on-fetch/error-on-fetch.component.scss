@@ -1,0 +1,66 @@
+.error-borad-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(78, 78, 78, 0.219);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    #error-board {
+        background-color: brown;
+        box-shadow: 0px 0px 4px 1px brown;
+
+        p {
+            font-size: larger;
+            font-weight: bold;
+            color: antiquewhite;
+        }
+    }
+}
+
+
+@keyframes RotateClockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-borad-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(78, 78, 78, 0.219);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    #loading-board {
+        background-color: brown;
+        box-shadow: 0px 0px 4px 1px brown;
+        padding: 70px;
+
+        #inner-circle {
+            border: 15px solid white;
+            border-left-color: brown;
+            border-right-color: brown;
+            border-radius: 50%;
+            padding: 40px;
+            animation-name: RotateClockwise;
+            animation-duration: .9s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}

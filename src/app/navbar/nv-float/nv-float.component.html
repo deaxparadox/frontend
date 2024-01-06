@@ -1,10 +1,10 @@
 <div ((mouseleave))="dToggle()" (keydown)="disableDashboardOnEsc($event)" id="dashboard-left">
     <div [@DashboarOpenClose]="dOpen ? 'open' : 'close'"  id="container">
-        <div id="header">
+        <!-- <div id="header">
             <h2>
                 Dashboard
             </h2>
-        </div>
+        </div> -->
         <div id="body">
             <a href="/dashboard" class="link">Home</a>
             <a href="/double-ring" class="link">Double Ring</a>
@@ -17,9 +17,9 @@
             class="dashboard-button-active"
             [style.background-color] = 'dOpen ? "rgb(49, 4, 92)" : "blueviolet"'
         >
-            <h3>
+            <h5>
                 Dashboard
-            </h3>
+            </h5>
         </button>
     </div>
 </div>

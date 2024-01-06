@@ -20,12 +20,24 @@ export class PmsHomeComponent implements OnInit {
       this.get_headings()
   }
 
+  errorMessage?: string;
+  errorOccured = false;
+  loadingData = true;
+
+
   headings?: Heading[];
   async get_headings() {
     this.pmsHttpService.get_headings().subscribe(
       h => {
         this.headings = h;
+        this.loadingData = false;
         // console.log(h);
+      },
+      e => {
+        this.loadingData = false;
+        this.errorOccured = true;
+        console.log(e);
+        console.log("error on fetch :(")
       }
     )
   }

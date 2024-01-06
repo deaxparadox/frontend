@@ -1,6 +1,7 @@
 #dashboard-left {
     height: 90vh;
     position: fixed;
+    z-index: 3;
     left: 0;
     top: 5vh;
     display: flex;
